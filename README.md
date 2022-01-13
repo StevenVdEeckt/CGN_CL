@@ -6,13 +6,12 @@ This repository is meant to supplement the above paper. It contains the experime
 As data, we use the Corpus Gesproken Nederlands (CGN) dataset. To obtain a Continual Learning set-up, we split the CGN dataset into four tasks: nl-clean, be-clean, nl-spont, be-spont. Table below provides more information regarding the tasks.
 
 
-Task  | Dialect | Components | train | dev | test
-
-------------- | ------------- | ------------- | ------------- | ------------- | -------------
-nl-clean | Netherlands | b;f;g;h;i;k;l;m;n;o | 167k | 3k | 5k 
-be-clean | Belgium (Flanders) | b;f;g;h;i;k;l;m;n;o | 136k | 3k | 3k 
-nl-spont | Netherlands | a | 239k | 5k | 6k 
-be-spont | Belgium (Flanders) | a | 119k | 3k | 5k
+Task  | Dialect | Components | (train, dev, test) utterances
+------------- | ------------- | ------------- | ------------- 
+nl-clean | Netherlands | b;f;g;h;i;k;l;m;n;o | (167k, 3k, 5k)
+be-clean | Belgium (Flanders) | b;f;g;h;i;k;l;m;n;o | (136k, 3k, 3k)
+nl-spont | Netherlands | a | (239k, 5k, 6k) 
+be-spont | Belgium (Flanders) | a | (119k, 3k, 5k)
 
 
 For more information regarding the dialect and components, see: https://ivdnt.org/images/stories/producten/documentatie/cgn_website/doc_English/topics/index.htm 
