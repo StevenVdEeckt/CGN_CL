@@ -3,7 +3,7 @@ Supplementary material to the paper "Using Adapters to Overcome Catastrophic For
 This repository is meant to supplement the above paper. It contains the experimental details which should be sufficient to reproduce the results. 
 
 ## data ##
-As data, we use the Corpus Gesproken Nederlands (CGN) dataset. To obtain a Continual Learning set-up, we split the CGN dataset into four tasks: nl-clean, be-clean, nl-spont, be-spont. Table below provides more information regarding the tasks.
+As data, we use the Corpus Gesproken Nederlands (CGN) dataset. To obtain a Continual Learning set-up, we split the CGN dataset into four tasks: nl-clean, be-clean, nl-spont, be-spont. Table below provides more information regarding the tasks. Note that the tasks were learned as presented in the table. 
 
 
 Task  | Dialect | Components | (train, dev, test) utterances
