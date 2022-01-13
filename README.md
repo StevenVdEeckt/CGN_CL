@@ -40,10 +40,12 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 ## hyper-parameters ##
 Finally, we provide some information regarding the hyper-parameters of the Continual Learning methods used in the paper; more specifically, lambda, the weight of the regularization. See the Table below.
 
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
+Method | Lambda
+| :--- | ---:
+EWC, A/EWC  | 10^3
+LWF  | 10^(-1)
+KD, A/KD  | 10^(-1)
+
 
 
 
