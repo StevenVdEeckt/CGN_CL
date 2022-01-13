@@ -8,8 +8,8 @@ As data, we use the Corpus Gesproken Nederlands (CGN) dataset. To obtain a Conti
 
 Task  | Dialect | Components | (train, dev, test) utterances
 ------------- | ------------- | ------------- | ------------- 
-nl-clean | Netherlands | b;f;g;h;i;k;l;m;n;o | (167k, 3k, 5k)
-be-clean | Belgium (Flanders) | b;f;g;h;i;k;l;m;n;o | (136k, 3k, 3k)
+nl-clean | Netherlands | b,f,g,h,i,k,l,m,n,o | (167k, 3k, 5k)
+be-clean | Belgium (Flanders) | b,f,g,h,i,k,l,m,n,o | (136k, 3k, 3k)
 nl-spont | Netherlands | a | (239k, 5k, 6k) 
 be-spont | Belgium (Flanders) | a | (119k, 3k, 5k)
 
