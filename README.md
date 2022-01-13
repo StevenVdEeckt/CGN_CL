@@ -3,7 +3,7 @@ Supplementary material to the paper "Using Adapters to Overcome Catastrophic For
 This repository is meant to supplement the above paper. It contains the experimental details which should be sufficient to reproduce the results. 
 
 ## data ##
-As data, we use the Corpus Gesproken Nederlands (CGN) dataset. To obtain a Continual Learning set-up, we split the CGN dataset into four tasks: nl-clean, be-clean, nl-spont, be-spont. Table below provides more information regarding the tasks. Note that the tasks were learned as presented in the table. 
+As data, we use the Corpus Gesproken Nederlands (CGN) dataset [Oostdijk, 2000]. To obtain a Continual Learning set-up, we split the CGN dataset into four tasks: nl-clean, be-clean, nl-spont, be-spont. Table below provides more information regarding the tasks. Note that the tasks were learned as presented in the table. 
 
 
 Task  | Dialect | Components | (train, dev, test) utterances
@@ -21,7 +21,7 @@ For each task, we have four datasets: training set, dev set, test set and a memo
 The folder 'data' contains the list of utterances and speakers per dataset, for each of the four tasks.
 
 ## model ## 
-For the model, we use the ESPnet library. This folder provides the necessary information and files to run an ESPnet model with the same settings as in the paper. 
+For the model, we use the ESPnet library [Watanabeet al., 2018]. This folder provides the necessary information and files to run an ESPnet model with the same settings as in the paper. 
 
 ### wordpieces ### 
 In this folder, the files regarding the vocabulary can be found. The vocabulary was generated with the Sentence Piece model on the first task (nl-clean) and consists of approximately 300 word pieces. This same vocabulary was used for all tasks.
@@ -49,6 +49,9 @@ EWC, A/EWC  | 10^3
 LWF  | 10^(-1)
 KD, A/KD  | 10^(-1)
 
+## References ##
+[Oostdijk, 2000] Nelleke Oostdijk. The spoken dutch corpus: Overview and first evaluation. Proceedings of LREC-2000, Athens, 2, 01 2000.
+[Watanabeet al., 2018] Shinji Watanabe, Takaaki Hori,Shigeki  Karita,  Tomoki  Hayashi,  Jiro  Nishitoba,  YuyaUnno,   Nelson  Enrique  Yalta  Soplin,   Jahn  Heymann,Matthew Wiesner, Nanxin Chen, Adithya Renduchintala,and Tsubasa Ochiai.  ESPnet: End-to-end speech process-ing toolkit.   InProceedings of Interspeech,  pages 2207–2211, 2018.
 
 
 
