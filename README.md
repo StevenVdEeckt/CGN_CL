@@ -25,7 +25,7 @@ The folder 'data' contains the list of utterances and speakers per dataset, for 
 For the model, we use the ESPnet library [Watanabe et al., 2018]. This folder provides the necessary information and files to run an ESPnet model with the same settings as in the paper. 
 
 ### wordpieces ### 
-In this folder, the files regarding the vocabulary can be found. The vocabulary was generated with the Sentence Piece model on the first task (nl-clean) and consists of approximately 300 word pieces. This same vocabulary was used for all tasks.
+In this folder, the files regarding the vocabulary can be found. The vocabulary was generated with the Sentence Piece model [Kudo and Richardson, 2018] on the first task (nl-clean) and consists of approximately 300 word pieces. This same vocabulary was used for all tasks.
 
 ### config_files ###
 This folder contains the configuration files to be used by ESPnet for training and decoding. In particular, the following configuration files are provided:
@@ -55,5 +55,4 @@ KD, A/KD  | 10^(-1)
 
 [Watanabe et al., 2018] Shinji Watanabe, Takaaki Hori,Shigeki  Karita,  Tomoki  Hayashi,  Jiro  Nishitoba,  YuyaUnno,   Nelson  Enrique  Yalta  Soplin,   Jahn  Heymann,Matthew Wiesner, Nanxin Chen, Adithya Renduchintala,and Tsubasa Ochiai.  ESPnet: End-to-end speech process-ing toolkit.   InProceedings of Interspeech,  pages 2207–2211, 2018.
 
-
-
+[Kudo and Richardson, 2018] Taku Kudo and John Richard-son.  SentencePiece:  A simple and language independentsubword  tokenizer  and  detokenizer  for  neural  text  pro-cessing.   InProceedings of the 2018 Conference on Em-pirical Methods in Natural Language Processing: Sys-tem Demonstrations,  pages  66–71,  Brussels,  Belgium, November 2018. Association for Computational Linguis-tics.
