@@ -5,6 +5,7 @@ This repository is meant to supplement the above paper. It contains the experime
 ## data ##
 As data, we use the Corpus Gesproken Nederlands (CGN) dataset. To obtain a Continual Learning set-up, we split the CGN dataset into four tasks: nl-clean, be-clean, nl-spont, be-spont. Table below provides more information regarding the tasks.
 
+
 Task | Dialect | Components | train utterances | dev utterances | test utterances
 | :--- | :--- | ---: | ---: | ---: | ---:
 nl-clean  | Netherlands | b;f;g;h;i;k;l;m;n;o | 167k | 3k | 5k
@@ -39,6 +40,7 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 
 ## hyper-parameters ##
 Finally, we provide some information regarding the hyper-parameters of the Continual Learning methods used in the paper; more specifically, lambda, the weight of the regularization. See the Table below.
+
 
 Method | Lambda
 | :--- | ---:
