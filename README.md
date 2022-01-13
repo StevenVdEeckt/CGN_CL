@@ -38,6 +38,12 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 - run_cgn300_stage5.sh: stage 5 of the recipe. 
 
 ## hyper-parameters ##
-Finally, we provide some information regarding the hyper-parameters of the Continual Learning methods used in the paper. $\lambda$
+Finally, we provide some information regarding the hyper-parameters of the Continual Learning methods used in the paper; more specifically, lambda, the weight of the regularization. See the Table below.
+
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
+
 
 
