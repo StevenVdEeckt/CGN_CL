@@ -1,7 +1,7 @@
 # CGN_CL
 Supplementary material to the paper "Using Adapters to Overcome Catastrophic Forgetting in End-to-End Automatic Speech Recognition" , submitted at IJCAI 2022. 
 
-This repository is meant to supplement the above paper. It contains the experimental details which should be sufficient to reproduce the results. 
+This repository is meant to supplement the above paper. It contains the experimental details which should be sufficient to reproduce the results. For any questions, contact <steven.vandereeckt@esat.kuleuven.be>.
 
 ## data ##
 As data, we use the Corpus Gesproken Nederlands (CGN) dataset [Oostdijk, 2000]. To obtain a Continual Learning set-up, we split the CGN dataset into four tasks: nl-clean, be-clean, nl-spont, be-spont. Table below provides more information regarding the tasks. Note that the tasks were learned as presented in the table. 
