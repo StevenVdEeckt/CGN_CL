@@ -51,9 +51,9 @@ LWF  | 10^(-1)
 KD, A/KD  | 10^(-1)
 
 ## References ##
-[Kudo and Richardson, 2018] Taku Kudo and John Richard-son.  SentencePiece:  A simple and language independentsubword  tokenizer  and  detokenizer  for  neural  text  pro-cessing.   InProceedings of the 2018 Conference on Em-pirical Methods in Natural Language Processing: Sys-tem Demonstrations,  pages  66–71,  Brussels,  Belgium, November 2018. Association for Computational Linguis-tics.
+[Kudo and Richardson, 2018] Taku Kudo and John Richardson.  SentencePiece:  A simple and language independentsubword  tokenizer  and  detokenizer  for  neural  text  pro-cessing.   InProceedings of the 2018 Conference on Em-pirical Methods in Natural Language Processing: System Demonstrations,  pages  66–71,  Brussels,  Belgium, November 2018. Association for Computational Linguistics.
 
 [Oostdijk, 2000] Nelleke Oostdijk. The spoken dutch corpus: Overview and first evaluation. Proceedings of LREC-2000, Athens, 2, 01 2000.
 
-[Watanabe et al., 2018] Shinji Watanabe, Takaaki Hori,Shigeki  Karita,  Tomoki  Hayashi,  Jiro  Nishitoba,  YuyaUnno,   Nelson  Enrique  Yalta  Soplin,   Jahn  Heymann,Matthew Wiesner, Nanxin Chen, Adithya Renduchintala,and Tsubasa Ochiai.  ESPnet: End-to-end speech process-ing toolkit.   InProceedings of Interspeech,  pages 2207–2211, 2018.
+[Watanabe et al., 2018] Shinji Watanabe, Takaaki Hori,Shigeki  Karita,  Tomoki  Hayashi,  Jiro  Nishitoba,  YuyaUnno,   Nelson  Enrique  Yalta  Soplin,   Jahn  Heymann,Matthew Wiesner, Nanxin Chen, Adithya Renduchintala, and Tsubasa Ochiai.  ESPnet: End-to-end speech processing toolkit.   In Proceedings of Interspeech,  pages 2207–2211, 2018.
 
