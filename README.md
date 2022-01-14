@@ -51,7 +51,7 @@ LWF  | 10^(-1)
 KD, A/KD  | 10^(-1)
 
 ## References ##
-[Kudo and Richardson, 2018] Taku Kudo and John Richardson.  SentencePiece:  A simple and language independentsubword  tokenizer  and  detokenizer  for  neural  text  pro-cessing.   InProceedings of the 2018 Conference on Em-pirical Methods in Natural Language Processing: System Demonstrations,  pages  66–71,  Brussels,  Belgium, November 2018. Association for Computational Linguistics.
+[Kudo and Richardson, 2018] Taku Kudo and John Richardson.  SentencePiece:  A simple and language independentsubword  tokenizer  and  detokenizer  for  neural  text  processing.   InProceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations,  pages  66–71,  Brussels,  Belgium, November 2018. Association for Computational Linguistics.
 
 [Oostdijk, 2000] Nelleke Oostdijk. The spoken dutch corpus: Overview and first evaluation. Proceedings of LREC-2000, Athens, 2, 01 2000.
 
