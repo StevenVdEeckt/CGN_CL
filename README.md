@@ -1,4 +1,4 @@
-# CGN_CL
+# CGN_CL_Speech
 Supplementary material to the paper "Using Adapters to Overcome Catastrophic Forgetting in End-to-End Automatic Speech Recognition" , submitted at IJCAI 2022. 
 
 This repository is meant to supplement the above paper. It contains the experimental details which should be sufficient to reproduce the results. For any questions, contact <steven.vandereeckt@esat.kuleuven.be>.
