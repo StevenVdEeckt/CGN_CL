@@ -41,7 +41,7 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 - run_cgn300_stage5.sh: stage 5 of the recipe. 
 
 ## hyper-parameters ##
-Finally, we provide some information regarding the hyper-parameters of the Continual Learning methods used in the paper; more specifically, lambda, the weight of the regularization. See the Table below.
+Below are the values of Lambda (weight of regularization) used for the CL methods in the paper. These are the same values as in [Vander Eeckt and Van hamme, 2022].
 
 
 Method | Lambda
@@ -50,6 +50,13 @@ EWC, A/EWC  | 10^3
 LWF  | 10^(-1)
 KD, A/KD  | 10^(-1)
 
+## results ## 
+Finally, we provide some more information regarding the results in the paper, as well as regarding their statistical significance. 
+
+### full results ###
+
+### statistical significance ###
+
 ## References ##
 [Kudo and Richardson, 2018] Taku Kudo and John Richardson.  SentencePiece:  A simple and language independentsubword  tokenizer  and  detokenizer  for  neural  text  processing.   InProceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations,  pages  66–71,  Brussels,  Belgium, November 2018. Association for Computational Linguistics.
 
@@ -57,3 +64,4 @@ KD, A/KD  | 10^(-1)
 
 [Watanabe et al., 2018] Shinji Watanabe, Takaaki Hori,Shigeki  Karita,  Tomoki  Hayashi,  Jiro  Nishitoba,  YuyaUnno,   Nelson  Enrique  Yalta  Soplin,   Jahn  Heymann,Matthew Wiesner, Nanxin Chen, Adithya Renduchintala, and Tsubasa Ochiai.  ESPnet: End-to-end speech processing toolkit.   In Proceedings of Interspeech,  pages 2207–2211, 2018.
 
+[Vander Eeckt and Van hamme, 2022] S. Vander Eeckt and H. Van hamme, “Continual learning for monolingual end-to-end automatic speech recognition,” 2022
