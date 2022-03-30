@@ -55,9 +55,28 @@ Finally, we provide some more information regarding the results in the paper, as
 
 ### full results ### 
 
+The full results of the experiments are given below. This contains the adapter-based methods, with and without weight decay (as explained in the paper), as well as the baselines. 
+
 ![Results](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/results/final_results.png)
 
 ### statistical significance ###
+
+With the following table the legend of the statistical significance results:
+
+![Significance_Legend](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_legend.png)
+
+The table below shows the statistical significance of the adapter-based methods compared to the baselines (supplementary to Table 1 in the paper):
+
+![Significance_Results](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_final_results.png)
+
+On the other hand, the following table shows the statistical significance for Table 2, i.e. the adapter-based methods decoded while inferring the task label from the likelihood:
+
+![Significance_Likelihood](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_likelihood_decoding.png)
+
+Finally, the following table gives the statistical significance for Table 3, which compared the adapter-based methods with weight decay to the corresponding methods without weight decay:
+
+![Significance_Ablation](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_ablation.png)
+
 
 ## References ##
 [Kudo and Richardson, 2018] Taku Kudo and John Richardson.  SentencePiece:  A simple and language independentsubword  tokenizer  and  detokenizer  for  neural  text  processing.   InProceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations,  pages  66–71,  Brussels,  Belgium, November 2018. Association for Computational Linguistics.
