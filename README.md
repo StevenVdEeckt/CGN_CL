@@ -61,6 +61,8 @@ The full results of the experiments are given below. This contains the adapter-b
 
 ### statistical significance ###
 
+Finally, we provide information regarding the statistical significance of the results. To test the statistical significance, we computed the number of errors per utterance, and used the Wilcoxon signed-rank test to compare two models, as done in [Strik et al., 2000].
+
 With the following table the legend of the statistical significance results:
 
 ![Significance_Legend](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_legend.png)
@@ -86,3 +88,7 @@ Finally, the following table gives the statistical significance for Table 3, whi
 [Watanabe et al., 2018] Shinji Watanabe, Takaaki Hori,Shigeki  Karita,  Tomoki  Hayashi,  Jiro  Nishitoba,  YuyaUnno,   Nelson  Enrique  Yalta  Soplin,   Jahn  Heymann,Matthew Wiesner, Nanxin Chen, Adithya Renduchintala, and Tsubasa Ochiai.  ESPnet: End-to-end speech processing toolkit.   In Proceedings of Interspeech,  pages 2207–2211, 2018.
 
 [Vander Eeckt and Van hamme, 2022] S. Vander Eeckt and H. Van hamme, “Continual learning for monolingual end-to-end automatic speech recognition,” 2022
+
+[Strik et al., 2000] Helmer Strik, Catia Cucchiarini, and Judith M. Kessens, “Comparing the recognition performance of csrs: in search of an adequate metric and statistical significance test,” in INTERSPEECH, 2000.
+
+
