@@ -53,7 +53,9 @@ KD, A/KD  | 10^(-1)
 ## results ## 
 Finally, we provide some more information regarding the results in the paper, as well as regarding their statistical significance. 
 
-### full results ###
+### full results ### 
+
+![Results](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/results/final_results.png)
 
 ### statistical significance ###
 
