@@ -1,5 +1,5 @@
 # CGN_CL_Adapters
-Supplementary material to the paper "Using Adapters to Overcome Catastrophic Forgetting in End-to-End Automatic Speech Recognition" , submitted to Interspeech 2022. 
+Supplementary material to the paper "Using Adapters to Overcome Catastrophic Forgetting in End-to-End Automatic Speech Recognition" , submitted to SLT 2022. 
 
 This repository is meant to supplement the above paper. It contains the experimental details which should be sufficient to reproduce the results. For any questions, contact <steven.vandereeckt@esat.kuleuven.be>.
 
@@ -41,14 +41,16 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 - run_cgn300_stage5.sh: stage 5 of the recipe. 
 
 ## hyper-parameters ##
-Below are the values of Lambda (weight of regularization) used for the CL methods in the paper. These are the same values as in [Vander Eeckt and Van hamme, 2022].
+Below are the values of Lambda (weight of regularization) used for the CL methods in the paper. For the baselines, these are the same values as in [Vander Eeckt and Van hamme, 2022]. For our own (adapter-based) methods, we used the methodology of [Vander Eeckt and Van hamme, 2022] with p=0.85 and a=0.10. 
 
 
 Method | Lambda
 | :--- | ---:
-EWC, A/EWC  | 10^3
-LWF  | 10^(-1)
-KD, A/KD  | 10^(-1)
+EWC  | 1E3
+LWF  | 1E-1
+KD  | 1E-1
+A/EWC | 1E3
+A/KD | 1E0
 
 ## results ## 
 Finally, we provide some more information regarding the results in the paper, as well as regarding their statistical significance. 
