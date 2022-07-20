@@ -79,7 +79,7 @@ Thus, the models whose name is displayed in Italic are not published in the pape
 
 In addition, the table below gives, for the models published in the paper, the same results as the table above, but with, in addition, a computation of the Backward Transfer and Forward Transfer, which, as explained in the paper, measure the extent to which models satisfy the 'Knowledge retention' and 'Forward transfer' desiderata, respectively. 
 Thus, the BWT columns show the change in WER for each task, thus the forgetting (if this change is negative). The AVG column is simply the average of these 'forgettings' and the BWT result published in the paper. 
-Similarly, the FWT columns compare the WER when a task was first learned to the WER of FT. If the result is positive, the given model learned the task better than FT. AVG is again the average for all task, and the FWT result published in the paper.
+Similarly, the FWT columns compare the WER when a task was first learned to the WER of FT. If the result is positive, the given model learned the task better than FT. AVG is again the average for all tasks, and the FWT result published in the paper.
 
 ![Results_with_BWT_and_FWT](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/results/final_results_with_computation_bwt_and_fwt.png)
 
