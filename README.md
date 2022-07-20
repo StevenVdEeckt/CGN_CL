@@ -43,11 +43,13 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 ## hyper-parameters ##
 
 ### initial model ###
-For the initial model, thus the model trained on the initial task, we apply weight decay to the shared parameters, in order to have the model exploit the adapter parameters to store the task-specific information, while keeping the shared parameters 'task-general'. As explained in the paper, as the weight of weight decay, we take the largest power of 10 for which the model learns the new task at most 1% worse than the model without weight decay. This resulted in 1E-5 as the weight of weight decay. The corresponding model had a 22.91 WER on NL-clean, compared to 22.81 for the model without weight decay. 
+For the initial model, thus the model trained on the initial task, we apply weight decay to the shared parameters, in order to have the model exploit the adapter parameters to store the task-specific information, while keeping the shared parameters 'task-general'. 
+As explained in the paper, as the weight of weight decay, we take the largest power of 10 for which the model learns the new task at most 1% worse than the model without weight decay. This resulted in 1E-5 as the weight of weight decay. The corresponding model had a 22.91 WER on NL-clean, compared to 22.81 for the model without weight decay. 
 
 
 ### cl methods ### 
-Below are the values of $\lambda$ (weight of regularization) used for the CL methods in the paper. To determine these weights, we used the methodology of [Vander Eeckt and Van hamme, 2022] (see Section 4, paragraph 'Determining $\lambda$'). This methodology decreases the regularization weight by multiplying it by $p \in (0, 1)$ until the gap between the initial model and the model trained without regularization (on the new task's validation set) is closed for at least $100a\%$. For the baselines, we consider $a=0.85$ and $p=0.10$ and obtain the same values as in [Vander Eeckt and Van hamme, 2022]. 
+Below are the values of $\lambda$ (weight of regularization) used for the CL methods in the paper. To determine these weights, we used the methodology of [Vander Eeckt and Van hamme, 2022] (see Section 4, paragraph 'Determining $\lambda$'). This methodology decreases the regularization weight by multiplying it by $p \in (0, 1)$ until the gap between the initial model and the model trained without regularization (on the new task's validation set) is closed for at least $100a\%$. 
+For the baselines, we consider $a=0.85$ and $p=0.10$ and obtain the same values as in [Vander Eeckt and Van hamme, 2022]. 
 For the adapter-based methods, A/EWC and A/KD, which are done in two stages, we instead take $a=0.60$. Since they are done in two stages, where in the first stage we train the new task's adapters and freeze the shared parameters, the 'initial model' here is the model that only goes through the first stage. The 'model trained without regularization' starts from this initial model and trains without regularization both the adapters and shared parameters in the second stage. 
 We take $a=0.60$, smaller than $a=0.85$ for the baselines, because with respect to the baselines' 'model trained without regularization', the adapter-based methods have already closed the gap to a large extent during their first stage. 
 
@@ -71,8 +73,16 @@ Finally, we provide some more information regarding the results in the paper, as
 ### full results ### 
 
 The full results of the experiments are given below. This contains both the baselines as well as the adapter-based CL methods (proposed in this paper). For the adapter-based methods, it shows the results: (i) when no weight decay is used during the initial task; (ii) when weight decay is used during the initial task (see Section 2.5); (iii) when, in addition to using weight decay, A/EWC and A/KD are done in two stages. 
+Thus, the models whose name is displayed in Italic are not published in the paper. 
 
 ![Results](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/results/final_results.png)
+
+In addition, the table below gives, for the models published in the paper, the same results as the table above, but with, in addition, a computation of the Backward Transfer and Forward Transfer, which, as explained in the paper, measure the extent to which models satisfy the 'Knowledge retention' and 'Forward transfer' desiderata, respectively. 
+Thus, the BWT columns show the change in WER for each task, thus the forgetting (if this change is negative). The AVG column is simply the average of these 'forgettings' and the BWT result published in the paper. 
+Similarly, the FWT columns compare the WER when a task was first learned to the WER of FT. If the result is positive, the given model learned the task better than FT. AVG is again the average for all task, and the FWT result published in the paper.
+
+![Results_with_BWT_and_FWT](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/results/final_results_with_computation_bwt_and_fwt.png)
+
 
 ### statistical significance ###
 
@@ -82,17 +92,21 @@ With the following table the legend of the statistical significance results:
 
 ![Significance_Legend](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_legend.png)
 
-The table below shows the statistical significance of the adapter-based methods compared to the baselines (supplementary to Table 1 in the paper):
+The table below shows the statistical significance of the adapter-based methods compared to the baselines (supplementary to Table 1 in the paper) on the Fourth or Final adaptation (thus the 'final results'):
 
 ![Significance_Results](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_final_results.png)
 
-On the other hand, the following table shows the statistical significance for Table 2, i.e. the adapter-based methods decoded while inferring the task label from the likelihood:
+In addition, the table below shows the same for the First Adaptation:
+
+![Significance_Results_First_Adaptation](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_first_adaptation.png)
+
+And, finally, for the second adaptation:
+![Significance_Results_Second_Adaptation](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_second_adaptation.png)
+
+
+On the other hand, the following table shows the statistical significance for Table 2, i.e. for the adapter-based methods decoded while inferring the task label from the likelihood:
 
 ![Significance_Likelihood](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_likelihood_decoding.png)
-
-Finally, the following table gives the statistical significance for Table 3, which compared the adapter-based methods with weight decay to the corresponding methods without weight decay:
-
-![Significance_Ablation](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/statistical_signifcance/statistical_significance_ablation.png)
 
 
 ## References ##
