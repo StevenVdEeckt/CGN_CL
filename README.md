@@ -47,11 +47,11 @@ We take $a=0.60$, smaller than $a=0.85$ for the baselines, because with respect 
 
 Method | Lambda
 | :--- | ---:
-EWC  | 1E3
+EWC  | 1E+3
 LWF  | 1E-1
 KD  | 1E-1
-A/EWC | 1E3
-A/KD | 1E0
+A/EWC | 1E+3
+A/KD | 1E+0
 
 Note that we also use this methodology from [Vander Eeckt and Van hamme, 2022] to determine the 'smaller learning rate' of A/FT, the same way as done for A/EWC and A/KD. Obviously, while higher regularization weight means less forgetting, the opposite is true for the learning rate: smaller learning rate means being more cautious. Therefore, we increase the learning rate (not decrease) until A/FT closes the gap between the 'initial model' and the 'model trained without regularization' by $100a\%$. 
 
