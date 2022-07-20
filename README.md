@@ -41,8 +41,9 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 - run_cgn300_stage5.sh: stage 5 of the recipe. 
 
 ## hyper-parameters ##
-Below are the values of Lambda (weight of regularization) used for the CL methods in the paper. For the baselines, these are the same values as in [Vander Eeckt and Van hamme, 2022]. For our own (adapter-based) methods, we used the methodology of [Vander Eeckt and Van hamme, 2022] with p=0.85 and a=0.10. 
-
+Below are the values of Lambda (weight of regularization) used for the CL methods in the paper. To determine these weights, we used the methodology of [Vander Eeckt and Van hamme, 2022] (see Section 4, paragraph 'Determining Lambda'). This methodology decreases the regularization weight by multiplying it by $p \in (0, 1)$ until the gap between the initial model and the model trained without regularization (on the new task's validation set) is closed for at least $100a\%$. For the baselines, we consider $a=0.85$ and $p=0.10$ and obtain the same values as in [Vander Eeckt and Van hamme, 2022]. 
+For the adapter-based methods, A/EWC and A/KD, which are done in two stages, we instead take $a=0.60$. Since they are done in two stages, where in the first stage we train the new task's adapters and freeze the shared parameters, the 'initial model' here is the model that only goes through the first stage. The 'model trained without regularization' starts from this initial model and trains without regularization both the adapters and shared parameters in the second stage. 
+We take $a=0.60$, smaller than $a=0.85$ for the baselines, because with respect to the baselines' 'model trained without regularization', the adapter-based methods have already closed the gap to a large extent during their first stage. 
 
 Method | Lambda
 | :--- | ---:
@@ -51,6 +52,12 @@ LWF  | 1E-1
 KD  | 1E-1
 A/EWC | 1E3
 A/KD | 1E0
+
+Note that we also use this methodology from [Vander Eeckt and Van hamme, 2022] to determine the 'smaller learning rate' of A/FT, the same way as done for A/EWC and A/KD. Obviously, while higher regularization weight means less forgetting, the opposite is true for the learning rate: smaller learning rate means being more cautious. Therefore, we increase the learning rate (not decrease) until A/FT closes the gap between the 'initial model' and the 'model trained without regularization' by $100a\%$. 
+
+Method | Learning rate
+| :--- | ---:
+A/FT | 1E-1
 
 ## results ## 
 Finally, we provide some more information regarding the results in the paper, as well as regarding their statistical significance. 
