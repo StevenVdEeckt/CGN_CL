@@ -41,6 +41,12 @@ This folder contains the run.sh files (recipes) used to run ESPnet, similar to t
 - run_cgn300_stage5.sh: stage 5 of the recipe. 
 
 ## hyper-parameters ##
+
+### initial model ###
+For the initial model, thus the model trained on the initial task, we apply weight decay to the shared parameters, in order to have the model exploit the adapter parameters to store the task-specific information, while keeping the shared parameters 'task-general'. As explained in the paper, as the weight of weight decay, we take the largest power of 10 for which the model learns the new task at most 1% worse than the model without weight decay. This resulted in 1E-5 as the weight of weight decay. The corresponding model had a 22.91 WER on NL-clean, compared to 22.81 for the model without weight decay. 
+
+
+### cl methods ### 
 Below are the values of $\lambda$ (weight of regularization) used for the CL methods in the paper. To determine these weights, we used the methodology of [Vander Eeckt and Van hamme, 2022] (see Section 4, paragraph 'Determining $\lambda$'). This methodology decreases the regularization weight by multiplying it by $p \in (0, 1)$ until the gap between the initial model and the model trained without regularization (on the new task's validation set) is closed for at least $100a\%$. For the baselines, we consider $a=0.85$ and $p=0.10$ and obtain the same values as in [Vander Eeckt and Van hamme, 2022]. 
 For the adapter-based methods, A/EWC and A/KD, which are done in two stages, we instead take $a=0.60$. Since they are done in two stages, where in the first stage we train the new task's adapters and freeze the shared parameters, the 'initial model' here is the model that only goes through the first stage. The 'model trained without regularization' starts from this initial model and trains without regularization both the adapters and shared parameters in the second stage. 
 We take $a=0.60$, smaller than $a=0.85$ for the baselines, because with respect to the baselines' 'model trained without regularization', the adapter-based methods have already closed the gap to a large extent during their first stage. 
@@ -64,7 +70,7 @@ Finally, we provide some more information regarding the results in the paper, as
 
 ### full results ### 
 
-The full results of the experiments are given below. This contains the adapter-based methods, with and without weight decay (as explained in the paper), as well as the baselines. 
+The full results of the experiments are given below. This contains both the baselines as well as the adapter-based CL methods (proposed in this paper). For the adapter-based methods, it shows the results: (i) when no weight decay is used during the initial task; (ii) when weight decay is used during the initial task (see Section 2.5); (iii) when, in addition to using weight decay, A/EWC and A/KD are done in two stages. 
 
 ![Results](https://github.com/StevenVdEeckt/CGN_CL_Adapters/blob/main/results/results/final_results.png)
 
